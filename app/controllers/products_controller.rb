@@ -2,9 +2,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-		#filter = params[:available] == 'true' ? true : false
-    #@products = Product.where(available: filter).order('title ASC')
 		@products = Product.all
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @products }
